@@ -45,3 +45,29 @@ const myObject = {
 const myFunction = function() {
     console.log("hello world");
 }
+
+/**
+ * stack & heap memory
+ */
+
+// stack memory
+let myName = "pankaj ghosh"
+let anotherName = myName;
+
+anotherName = "new name"
+
+console.log(anotherName);
+console.log(myName);
+
+// heap memory
+let userOne = {
+    email: "user@gmail.com",
+    upi : "user@oksbi"
+}
+
+let userTwo = userOne;
+
+userTwo.email = "pankaj@gmail.com";
+
+console.log(userTwo.email);
+console.log(userOne.email);
