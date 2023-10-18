@@ -42,3 +42,17 @@ console.log(Object.keys(newObj));
 console.log(Object.values(newObj));
 console.log(Object.entries(newObj));
 console.log(newObj.hasOwnProperty("isLoggedIn"));
+
+/**
+ * object destructuring
+ */
+
+const course = {
+    courseName : "javascript",
+    price : "free",
+    courseInstructor : "pankaj ghosh"
+}
+
+// console.log(course.courseName);
+const {courseName : name} = course;
+console.log(name);
