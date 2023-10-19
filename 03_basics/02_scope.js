@@ -13,3 +13,38 @@ if(true) {
 }
 
 console.log(a);
+
+// nested scope
+function one(){
+    const username = "pankaj";
+    function two(){
+        const website = "youtube";
+        console.log(username);
+    }
+    // console.log(website);
+    two();
+}
+one();
+
+if(true){
+    const username = "pankaj";
+    if(username === "pankaj"){
+        const website = " youtube";
+        console.log(username + website);
+    }
+    // console.log(webiste);
+}
+// console.log(username);
+
+// mini hoisting
+console.log(addOne(5));
+
+function addOne(num){
+    return num + 1;
+}
+
+// console.log(addTwo(5));
+
+const addTwo = function(num){
+    return num + 2;
+}
