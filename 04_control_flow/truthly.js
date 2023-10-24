@@ -24,3 +24,13 @@ const object = {};
 if(Object.keys(object).length === 0){
     console.log("this is a empty object");
 }
+
+//Nullish Coalescing Operator (??): null undefined
+
+let val1;
+// val1 = 5 ?? 10;
+// val1 = null ?? 10;
+// val1 = undefined ?? 15;
+val1 = null ?? 10 ?? 15;
+
+console.log(val1);
