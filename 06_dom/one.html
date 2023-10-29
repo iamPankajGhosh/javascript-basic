@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- Document Object Model (DOM) learing --> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM learing</title>
+</head>
+<body>
+    <div class="parent">
+        <div>sunday</div>
+        <div>monday</div>
+        <div>tuesday</div>
+        <div>wednesday</div>
+    </div>
+</body>
+<script>
+    const parant = document.querySelector(".parent");
+    console.log(parant);
+    console.log(parant.children);
+    console.log(parant.children[1]);
+    console.log(parant.children[1].innerHTML);
+
+    for (let i = 0; i < parant.children.length; i++) {
+        console.log(parant.children[i].innerHTML);
+    }
+</script>
+</html>
