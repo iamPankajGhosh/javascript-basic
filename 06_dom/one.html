@@ -7,10 +7,10 @@
 </head>
 <body>
     <div class="parent">
-        <div>sunday</div>
-        <div>monday</div>
-        <div>tuesday</div>
-        <div>wednesday</div>
+        <div class="day">sunday</div>
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
     </div>
 </body>
 <script>
@@ -23,5 +23,16 @@
     for (let i = 0; i < parant.children.length; i++) {
         console.log(parant.children[i].innerHTML);
     }
+
+    parant.children[1].style.color = "orange";
+    console.log(parant.firstElementChild);
+    console.log(parant.lastElementChild);
+
+    const dayOne = document.querySelector(".day");
+    console.log(dayOne);
+    console.log(dayOne.parentElement);
+    console.log(dayOne.nextElementSibling);
+
+    console.log("Nodes : ", parant.childNodes);
 </script>
 </html>
