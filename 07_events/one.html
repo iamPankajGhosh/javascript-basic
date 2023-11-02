@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-WEnsxAN8k3-4x2aiZN22ES3T_XX-DmjtmQ&usqp=CAU" id="photoshop" width="200" alt="photoshop">
+            </li>
+            <li>
+                <img src="https://media.cntraveler.com/photos/63482b255e7943ad4006df0b/16:9/w_2560%2Cc_limit/tokyoGettyImages-1031467664.jpeg" id="japan" width="200" alt="japan">
+            </li>
+            <li>
+                <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/Rivers-of-the-World-Cover.jpg" id="river" width="200" alt="river">
+            </li>
+            <li>
+                <img src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/255114031/900" id="owl" width="200" alt="owl">
+            </li>
+            <li>
+                <img src="https://media.istockphoto.com/id/504328872/photo/children-praying-together.jpg?s=612x612&w=0&k=20&c=gUDbM5rvXdCyehXqephBeHeeubbTDj7K6YBfUfj54Vo=" id="prayer" width="200" alt="prayer">
+            </li>
+            <li>
+                <a href="https://google.com">google</a>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    const owl = document.getElementById("owl");
+    // owl.onclick = function() {
+    //     alert("owl clicked");
+    // }
+
+    owl.addEventListener("click", () => {
+        alert("owl clicked");
+    });
+</script>
+</html>
