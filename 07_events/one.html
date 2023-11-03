@@ -25,7 +25,7 @@
                 <img src="https://media.istockphoto.com/id/504328872/photo/children-praying-together.jpg?s=612x612&w=0&k=20&c=gUDbM5rvXdCyehXqephBeHeeubbTDj7K6YBfUfj54Vo=" id="prayer" width="200" alt="prayer">
             </li>
             <li>
-                <a href="https://google.com">google</a>
+                <a href="https://google.com" id="google">google</a>
             </li>
         </ul>
     </div>
@@ -51,6 +51,16 @@
 
      owl.addEventListener("click", () => {
         console.log("owl clicked");
+    });
+
+    /**
+     * change defalut click event
+     */
+     const google = document.getElementById("google");
+     google.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log("google clicked");
     });
 </script>
 </html>
