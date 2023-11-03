@@ -36,8 +36,21 @@
     //     alert("owl clicked");
     // }
 
-    owl.addEventListener("click", () => {
-        alert("owl clicked");
+    // owl.addEventListener("click", () => {
+    //     alert("owl clicked");
+    // });
+
+    /**
+     * event propagation (flase) / event bubbling
+     */
+
+     const images = document.getElementById("images");
+     images.addEventListener("click", () => {
+        console.log("clicked inside the ul");
+    });
+
+     owl.addEventListener("click", () => {
+        console.log("owl clicked");
     });
 </script>
 </html>
