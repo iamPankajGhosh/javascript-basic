@@ -44,10 +44,10 @@
      * event propagation (flase) / event bubbling
      */
 
-     const images = document.getElementById("images");
-     images.addEventListener("click", () => {
-        console.log("clicked inside the ul");
-    });
+    //  const images = document.getElementById("images");
+    //  images.addEventListener("click", () => {
+    //     console.log("clicked inside the ul");
+    // });
 
      owl.addEventListener("click", () => {
         console.log("owl clicked");
@@ -62,5 +62,18 @@
         e.stopPropagation();
         console.log("google clicked");
     });
+
+    /**
+     * event propagation (true) / event capturing
+     */
+
+     images.addEventListener("click", () => {
+        console.log("clicked inside the ul");
+    }, true);
+
+    const photoshop = document.getElementById("photoshop");
+     photoshop.addEventListener("click", () => {
+        console.log("photoshop clicked");
+    }, true);
 </script>
 </html>
