@@ -29,3 +29,32 @@ const tea = new createUser("tea", 25);
 const coffee = createUser("coffee", 250);
 
 tea.printMe();
+
+/**
+ * create custom method
+ */
+
+let myHeros = ["thor", "spiderman"];
+
+let heroPower = {
+    "thor" : "hammer",
+    "spiderman" : "sling",
+
+    getSpiderPower : function() {
+        console.log(`Spiderman power is ${this.spiderman}`)
+    }
+}
+
+Object.prototype.pankaj = function(){
+    console.log(`pankaj is present in all object`);
+}
+
+Array.prototype.heyPankaj = function() {
+    console.log(`pankaj say hello`);
+}
+
+heroPower.pankaj();
+myHeros.pankaj();
+
+myHeros.heyPankaj();
+// heroPower.heyPankaj();
