@@ -58,3 +58,30 @@ myHeros.pankaj();
 
 myHeros.heyPankaj();
 // heroPower.heyPankaj();
+
+/**
+ * inheritance
+ */
+
+const user = {
+    name : "username",
+    email : "user@gmail.com"
+}
+
+const Teacher = {
+    makeVideo: true
+}
+
+const TeachingSupport = {
+    isAvailable : false
+}
+
+const TASupport = {
+    makeAssignment : "JS Assignment",
+    fullTime : true,
+    __proto__: TeachingSupport
+}
+
+Teacher.__proto__ = user; // old syntax
+
+Object.setPrototypeOf(TeachingSupport, Teacher); // modern syntax
