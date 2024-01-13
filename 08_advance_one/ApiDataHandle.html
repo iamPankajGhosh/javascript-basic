@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="root"></div>
+    <script>
+      const root = document.querySelector(".root");
+
+      fetch("https://mocki.io/v1/d4867d8b-b5d5-4a48-a4ab-79131b5809b8")
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          data.map((user, index) => {
+            const h1 = document.createElement("h1");
+            const small = document.createElement("small");
+
+            h1.setAttribute("key", index);
+            small.setAttribute("key", index);
+
+            h1.innerHTML = user.name;
+            small.innerHTML = user.city;
+
+            root.appendChild(h1);
+            root.appendChild(small);
+          });
+        });
+    </script>
+  </body>
+</html>
