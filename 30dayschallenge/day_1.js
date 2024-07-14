@@ -32,3 +32,9 @@ let initialValue = "value 1";
 initialValue = "value 2";
 
 console.log(initialValue);
+
+// task 6
+const newValue = "value 3";
+// newValue = "value 4";
+
+console.log(newValue);
