@@ -29,8 +29,9 @@ console.log(typeof updateDate); // object
 
 // task 5
 let initialValue = "value 1";
-initialValue = "value 2";
+console.log(initialValue);
 
+initialValue = "value 2";
 console.log(initialValue);
 
 // task 6
@@ -38,3 +39,5 @@ const newValue = "value 3";
 // newValue = "value 4";
 
 console.log(newValue);
+
+// feature request
