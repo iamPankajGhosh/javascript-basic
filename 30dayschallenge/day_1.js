@@ -26,3 +26,9 @@ console.log(typeof username); // string
 console.log(typeof isValidate); // boolean
 console.log(typeof userData); // object
 console.log(typeof updateDate); // object
+
+// task 5
+let initialValue = "value 1";
+initialValue = "value 2";
+
+console.log(initialValue);
