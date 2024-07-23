@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 10</title>
+  </head>
+  <body>
+    <p id="text">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo quo est
+      impedit dignissimos repellat vero nulla ex asperiores earum esse provident
+      sequi ea, consectetur ut accusantium quos nihil commodi expedita?
+    </p>
+    <button id="btn">Change text</button>
+
+    <img
+      id="banner"
+      src="https://cdn.pixabay.com/photo/2017/06/14/07/05/siberian-2401287_1280.jpg"
+      alt="banner"
+    />
+
+    <div>
+      <p id="text2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ex
+        reiciendis voluptatem. Voluptate ea, pariatur ad commodi porro nostrum
+        saepe error voluptatibus dolore non odit, explicabo nesciunt reiciendis
+        tempore a?Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+        ex reiciendis voluptatem. Voluptate ea, pariatur ad commodi porro
+        nostrum saepe error voluptatibus dolore non odit, explicabo nesciunt
+        reiciendis tempore a?Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Illo ex reiciendis voluptatem. Voluptate ea, pariatur ad commodi
+        porro nostrum saepe error voluptatibus dolore non odit, explicabo
+        nesciunt reiciendis tempore a?Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Illo ex reiciendis voluptatem. Voluptate ea, pariatur
+        ad commodi porro nostrum saepe error voluptatibus dolore non odit,
+        explicabo nesciunt reiciendis tempore a?Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Illo ex reiciendis voluptatem. Voluptate
+        ea, pariatur ad commodi porro nostrum saepe error voluptatibus dolore
+        non odit, explicabo nesciunt reiciendis tempore a?
+      </p>
+
+      <input id="input" />
+
+      <form id="form">
+        <input id="formInput" />
+        <button type="submit">Submit</button>
+      </form>
+
+      <select id="selectValue">
+        <option value="">Select Value</option>
+        <option value="Hello World">Hello World</option>
+        <option value="Hello Javascript">Hello Javascript</option>
+      </select>
+
+      <p id="displayValue"></p>
+
+      <ul id="fruits">
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Banana</li>
+      </ul>
+      <button id="addItemBtn">add item</button>
+    </div>
+
+    <script>
+      // task 1
+      const text = document.getElementById("text");
+      const button = document.getElementById("btn");
+
+      button.addEventListener("click", function () {
+        text.innerText = "hello world";
+      });
+
+      // task 2
+      const banner = document.getElementById("banner");
+      banner.addEventListener("dblclick", function () {
+        banner.style.visibility = "hidden";
+      });
+
+      // task 3
+      const text2 = document.getElementById("text2");
+
+      text2.addEventListener("mouseover", function () {
+        text2.style.backgroundColor = "#000000";
+        text2.style.color = "#ffffff";
+      });
+
+      // task 4
+      text2.addEventListener("mouseout", function () {
+        text2.style.backgroundColor = "#ffffff";
+        text2.style.color = "#000000";
+      });
+
+      // task 5
+      const input = document.getElementById("input");
+      input.addEventListener("keydown", function (e) {
+        console.log("the key pressed :", e.key);
+      });
+
+      // task 6
+      input.addEventListener("keyup", function () {
+        console.log(text.innerText);
+      });
+
+      // task 7
+      const form = document.getElementById("form");
+      const formInput = document.getElementById("formInput");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        console.log(formInput.value);
+      });
+
+      // task 8
+      const selectValue = document.getElementById("selectValue");
+      const displayValue = document.getElementById("displayValue");
+
+      selectValue.addEventListener("change", function (e) {
+        displayValue.innerText = e.target.value;
+      });
+
+      // task 9
+      const fruits = document.getElementById("fruits");
+      fruits.addEventListener("click", function (e) {
+        if (e.target && e.target.nodeName === "LI") {
+          console.log(e.target.textContent);
+        }
+      });
+
+      // task 10
+      const addItemBtn = document.getElementById("addItemBtn");
+      addItemBtn.addEventListener("click", function () {
+        const li = document.createElement("li");
+        li.innerText = `iItem ${fruits.children.length + 1}`;
+        fruits.appendChild(li);
+      });
+    </script>
+  </body>
+</html>
